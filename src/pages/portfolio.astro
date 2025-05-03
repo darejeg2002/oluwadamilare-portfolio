@@ -1,0 +1,325 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="Portfolio | Digital Learning Specialist" description="Explore my eLearning development and instructional design projects showcasing expertise in digital learning solutions.">
+  <section class="portfolio-hero">
+    <div class="container">
+      <div class="section-title">
+        <h1>My Portfolio</h1>
+        <p>Explore my work in eLearning development, instructional design, and LMS implementation</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section portfolio-filters">
+    <div class="container">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="elearning">eLearning Development</button>
+        <button class="filter-btn" data-filter="instructional">Instructional Design</button>
+        <button class="filter-btn" data-filter="lms">LMS Implementation</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section portfolio-grid">
+    <div class="container">
+      <div class="projects-grid" id="projects-container">
+        <!-- eLearning Development Projects -->
+        <div<div class="project-item" data-category="elearning instructional">
+          <ProjectCard 
+            title="Kampala International University eLearning Training Program" 
+            description="Developed a comprehensive training program for faculty transitioning to online teaching, including interactive modules and assessment strategies."
+            image="/images/project-kiu.jpg"
+            link="/portfolio/kiu-elearning"
+            tags={["Articulate Storyline", "Moodle", "Faculty Training"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="elearning">
+          <ProjectCard 
+            title="Corporate Compliance Training Suite" 
+            description="Created an engaging compliance training program that reduced completion time by 30% while improving knowledge retention metrics."
+            image="/images/project-compliance.jpg"
+            link="/portfolio/compliance-training"
+            tags={["Camtasia", "TalentLMS", "Microlearning"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="elearning">
+          <ProjectCard 
+            title="Interactive Medical Procedures Simulation" 
+            description="Designed interactive simulations for medical professionals to practice procedures in a risk-free virtual environment."
+            image="/images/project-medical.jpg"
+            link="/portfolio/medical-simulation"
+            tags={["iSpring", "Simulation", "Healthcare"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="instructional">
+          <ProjectCard 
+            title="Financial Literacy Curriculum" 
+            description="Developed a comprehensive curriculum for teaching financial literacy to high school students, including lesson plans and interactive activities."
+            image="/images/project-financial.jpg"
+            link="/portfolio/financial-literacy"
+            tags={["Curriculum Design", "Assessment", "K-12"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="lms">
+          <ProjectCard 
+            title="Corporate Learning Portal Implementation" 
+            description="Designed and implemented a custom learning portal for a multinational corporation, integrating with their existing HR systems."
+            image="/images/project-corporate.jpg"
+            link="/portfolio/corporate-portal"
+            tags={["TalentLMS", "API Integration", "Custom Development"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="elearning">
+          <ProjectCard 
+            title="Sales Training Microlearning Series" 
+            description="Created a series of bite-sized learning modules for sales professionals, accessible on mobile devices for just-in-time learning."
+            image="/images/project-sales.jpg"
+            link="/portfolio/sales-training"
+            tags={["Microlearning", "Mobile Learning", "Camtasia"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="instructional lms">
+          <ProjectCard 
+            title="University Course Redesign Initiative" 
+            description="Led the redesign of traditional university courses for online delivery, including faculty training and content development."
+            image="/images/project-university.jpg"
+            link="/portfolio/course-redesign"
+            tags={["Higher Education", "Canvas", "Faculty Development"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="elearning">
+          <ProjectCard 
+            title="Customer Service Interactive Scenarios" 
+            description="Developed branching scenarios to train customer service representatives in handling difficult customer interactions."
+            image="/images/project-customer.jpg"
+            link="/portfolio/customer-service"
+            tags={["Articulate Storyline", "Branching Scenarios", "Assessment"]}
+          />
+        </div>
+        
+        <div class="project-item" data-category="lms">
+          <ProjectCard 
+            title="Moodle Implementation for K-12 School" 
+            description="Set up and customized a Moodle LMS for a K-12 school, including teacher training and parent portal integration."
+            image="/images/project-k12.jpg"
+            link="/portfolio/k12-moodle"
+            tags={["Moodle", "K-12", "System Integration"]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section case-study-highlight">
+    <div class="container">
+      <div class="case-study">
+        <div class="case-study-content">
+          <h2>Featured Case Study: Kampala International University</h2>
+          <h3>Challenge</h3>
+          <p>When the COVID-19 pandemic hit, Kampala International University needed to rapidly transition 200+ faculty members to online teaching with minimal disruption to student learning.</p>
+          
+          <h3>Solution</h3>
+          <p>I developed a comprehensive faculty training program that included:</p>
+          <ul>
+            <li>Interactive Articulate Storyline modules on online teaching best practices</li>
+            <li>Hands-on Moodle workshops for course setup and management</li>
+            <li>Video production training using Camtasia</li>
+            <li>Templates and guidelines for consistent course design</li>
+          </ul>
+          
+          <h3>Outcome</h3>
+          <p>Within 3 weeks, 95% of faculty successfully transitioned their courses online. Student satisfaction ratings remained above 85%, and the university has since adopted a permanent blended learning approach.</p>
+          
+          <a href="/portfolio/kiu-elearning" class="btn btn-primary">View Full Case Study</a>
+        </div>
+        <div class="case-study-image">
+          <img src="/images/case-study-kiu.jpg" alt="Kampala International University Case Study" />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Have a project in mind?</h2>
+        <p>Let's discuss how I can help you create effective digital learning experiences for your organization.</p>
+        <a href="/contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Portfolio filtering functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter projects
+        const filter = btn.getAttribute('data-filter');
+        
+        projectItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Portfolio Hero */
+  .portfolio-hero {
+    background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.8)), url('/images/portfolio-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+  
+  .portfolio-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .portfolio-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Portfolio Filters */
+  .portfolio-filters {
+    padding-bottom: 0;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .filter-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-fast);
+  }
+  
+  .filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-fast);
+  }
+  
+  .filter-btn:hover, .filter-btn.active {
+    color: var(--primary);
+  }
+  
+  .filter-btn.active::after, .filter-btn:hover::after {
+    width: 100%;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  /* Case Study Highlight */
+  .case-study {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    background-color: var(--background);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl);
+  }
+  
+  .case-study-content h2 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .case-study-content h3 {
+    color: var(--accent-dark);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    font-size: 1.25rem;
+  }
+  
+  .case-study-content ul {
+    list-style-type: disc;
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .case-study-content li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .case-study-content .btn {
+    margin-top: var(--spacing-md);
+  }
+  
+  .case-study-image img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .case-study {
+      grid-template-columns: 1fr;
+    }
+    
+    .case-study-image {
+      order: -1;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

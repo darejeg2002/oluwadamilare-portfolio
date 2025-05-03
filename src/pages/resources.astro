@@ -1,0 +1,362 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResourceCard from '../components/ResourceCard.astro';
+---
+
+<Layout title="Resources | Digital Learning Specialist" description="Free resources for eLearning development and instructional design, including templates, guides, and best practices.">
+  <section class="resources-hero">
+    <div class="container">
+      <div class="section-title">
+        <h1>Free Resources</h1>
+        <p>Downloadable templates, guides, and tools to enhance your digital learning projects</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section resources-filters">
+    <div class="container">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Resources</button>
+        <button class="filter-btn" data-filter="guide">Guides</button>
+        <button class="filter-btn" data-filter="template">Templates</button>
+        <button class="filter-btn" data-filter="checklist">Checklists</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section resources-grid">
+    <div class="container">
+      <div class="resources-container" id="resources-container">
+        <div class="resource-item" data-category="guide">
+          <ResourceCard 
+            title="5-Step LMS Implementation Checklist" 
+            description="A comprehensive guide to successfully implementing a learning management system in your organization."
+            image="/images/resource-lms.jpg"
+            downloadLink="/resources/lms-implementation-checklist.pdf"
+            type="Guide"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="guide">
+          <ResourceCard 
+            title="Microlearning Best Practices" 
+            description="Learn how to create effective microlearning modules that drive engagement and knowledge retention."
+            image="/images/resource-microlearning.jpg"
+            downloadLink="/resources/microlearning-best-practices.pdf"
+            type="Guide"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="template">
+          <ResourceCard 
+            title="Articulate Storyline Template Pack" 
+            description="A collection of professionally designed templates for creating consistent, engaging eLearning modules."
+            image="/images/resource-storyline.jpg"
+            downloadLink="/resources/storyline-templates.zip"
+            type="Template"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="template">
+          <ResourceCard 
+            title="Instructional Design Storyboard Template" 
+            description="A comprehensive storyboard template for planning your eLearning modules before development."
+            image="/images/resource-storyboard.jpg"
+            downloadLink="/resources/storyboard-template.pptx"
+            type="Template"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="checklist">
+          <ResourceCard 
+            title="eLearning Quality Assurance Checklist" 
+            description="Ensure your eLearning modules meet quality standards with this comprehensive QA checklist."
+            image="/images/resource-qa.jpg"
+            downloadLink="/resources/elearning-qa-checklist.pdf"
+            type="Checklist"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="guide">
+          <ResourceCard 
+            title="Transitioning from Teaching to eLearning Development" 
+            description="A guide for educators looking to leverage their teaching experience in the eLearning industry."
+            image="/images/resource-transition.jpg"
+            downloadLink="/resources/teaching-to-elearning.pdf"
+            type="Guide"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="template">
+          <ResourceCard 
+            title="PowerPoint Template for Video Lectures" 
+            description="Professional slide templates designed specifically for recording video lectures with optimal readability."
+            image="/images/resource-powerpoint.jpg"
+            downloadLink="/resources/video-lecture-templates.pptx"
+            type="Template"
+          />
+        </div>
+        
+        <div class="resource-item" data-category="checklist">
+          <ResourceCard 
+            title="Accessibility Compliance Checklist" 
+            description="Ensure your digital learning content meets accessibility standards with this comprehensive checklist."
+            image="/images/resource-accessibility.jpg"
+            downloadLink="/resources/accessibility-checklist.pdf"
+            type="Checklist"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2>Get New Resources First</h2>
+          <p>Subscribe to receive notifications when new resources are available. I share new templates, guides, and tools every month.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your email address" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+            <div class="form-consent">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I agree to receive occasional emails about new resources and digital learning tips.</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section custom-resources">
+    <div class="container">
+      <div class="custom-resources-content">
+        <div class="custom-resources-text">
+          <h2>Need Custom Resources?</h2>
+          <p>I can create custom templates, guides, or tools tailored to your organization's specific needs. Whether you need branded Articulate Storyline templates, custom assessment frameworks, or specialized training materials, I can help.</p>
+          <a href="/contact" class="btn btn-primary">Discuss Custom Resources</a>
+        </div>
+        <div class="custom-resources-image">
+          <img src="/images/custom-resources.jpg" alt="Custom Resources" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Resources filtering functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const resourceItems = document.querySelectorAll('.resource-item');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter resources
+        const filter = btn.getAttribute('data-filter');
+        
+        resourceItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletter-form');
+    
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // In a real implementation, you would send this data to a server
+        const email = document.getElementById('email').value;
+        const consent = document.getElementById('consent').checked;
+        
+        // For demo purposes, just show an alert
+        alert(`Thank you for subscribing with ${email}! You'll receive new resources directly to your inbox.`);
+        
+        // Reset the form
+        newsletterForm.reset();
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Resources Hero */
+  .resources-hero {
+    background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.8)), url('/images/resources-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+  
+  .resources-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .resources-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Resources Filters */
+  .resources-filters {
+    padding-bottom: 0;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .filter-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-fast);
+  }
+  
+  .filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-fast);
+  }
+  
+  .filter-btn:hover, .filter-btn.active {
+    color: var(--primary);
+  }
+  
+  .filter-btn.active::after, .filter-btn:hover::after {
+    width: 100%;
+  }
+  
+  /* Resources Grid */
+  .resources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: var(--background-alt);
+  }
+  
+  .newsletter-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .newsletter-content h2 {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .newsletter-content p {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .newsletter-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-group input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-md);
+    font-family: var(--body-font);
+    font-size: 1rem;
+  }
+  
+  .form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    text-align: left;
+  }
+  
+  .form-consent input {
+    margin-top: 5px;
+  }
+  
+  .form-consent label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  /* Custom Resources Section */
+  .custom-resources-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  
+  .custom-resources-text h2 {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .custom-resources-text p {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .custom-resources-image img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .form-group {
+      flex-direction: column;
+    }
+    
+    .custom-resources-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .custom-resources-image {
+      order: -1;
+      margin-bottom: var(--spacing-md);
+    }
+  }
+</style>

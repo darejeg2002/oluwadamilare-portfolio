@@ -1,0 +1,517 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="O'Damilare Jegede | Digital Learning Specialist & eLearning Developer">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-image-container">
+          <img src="/images/profile.jpg" alt="O'Damilare Jegede" class="hero-image" />
+        </div>
+        <h1>O'Damilare Jegede</h1>
+        <h2>Digital Learning Specialist & eLearning Developer</h2>
+        <p>Creating learner-centric digital experiences that bridge pedagogy and technology.</p>
+        <div class="hero-buttons">
+          <a href="/portfolio" class="btn btn-primary">View Projects</a>
+          <a href="/files/cv.pdf" class="btn btn-outline" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Projects Section -->
+  <section class="section featured-projects">
+    <div class="container">
+      <div class="section-title">
+        <div class="section-title">
+        <h2>Featured Projects</h2>
+        <p>Explore some of my recent work in eLearning development and instructional design</p>
+      </div>
+      
+      <div class="projects-grid">
+        <ProjectCard 
+          title="Kampala International University eLearning Training Program" 
+          description="Designed and developed engaging online courses aligned with educational objectives for faculty transitioning to online teaching."
+          image="/images/project-kiu.jpg"
+          link="/portfolio/kiu-elearning"
+          tags={["Moodle", "Faculty Training", "Instructional Design"]}
+        />
+        
+        <ProjectCard 
+          title="MoniePoint Hybrid Training Programs" 
+          description="Partnered with state trainers to design hybrid (physical and digital) training programs for new managers across 7 states."
+          image="/images/project-moniepoint.jpg"
+          link="/portfolio/moniepoint-training"
+          tags={["Hybrid Learning", "Management Training", "Curriculum Development"]}
+        />
+        
+        <ProjectCard 
+          title="GTFIELDS LMS Implementation" 
+          description="Designed LMS systems for private schools and trained staff on content development, with curriculum development for diverse topics."
+          image="/images/project-gtfields.jpg"
+          link="/portfolio/gtfields-lms"
+          tags={["LMS Administration", "Content Development", "Staff Training"]}
+        />
+      </div>
+      
+      <div class="text-center mt-lg">
+        <a href="/portfolio" class="btn btn-outline">View All Projects</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="section skills-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Core Expertise</h2>
+        <p>Specialized skills in digital learning development and instructional design</p>
+      </div>
+      
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-laptop-code"></i> eLearning Development</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-name">Articulate Storyline</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Camtasia</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">iSpring Suite</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Wondershare Filmora</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-chalkboard-teacher"></i> Instructional Design</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-name">Instructional Design Systems (ISD)</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Curriculum Development</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Training Facilitation</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Media Development</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> LMS Administration</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-name">Moodle</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">TalentLMS</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Microsoft Power BI</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li>
+              <span class="skill-name">Tableau</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Client Testimonials</h2>
+        <p>What clients and collaborators say about working with me</p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"O'Damilare's expertise in instructional design and eLearning development has been invaluable for our faculty training program. His ability to translate complex educational concepts into engaging digital content has significantly improved our online teaching capabilities."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="/images/testimonial-1.jpg" alt="Dr. Sarah Johnson" />
+            <div class="author-info">
+              <h4>Dr. Sarah Johnson</h4>
+              <p>Director of Digital Learning, Kampala International University</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"The hybrid training programs developed by O'Damilare for our new managers were exceptionally well-designed. His understanding of both physical and digital learning environments created a seamless experience that effectively prepared our team for their roles."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="/images/testimonial-2.jpg" alt="Michael Chen" />
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>HR Director, MoniePoint</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to transform your learning experience?</h2>
+        <p>Let's collaborate to create engaging, effective digital learning solutions for your organization.</p>
+        <a href="/contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.8)), url('/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--spacing-xl) 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hero-image-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    animation: pulse 3s infinite alternate;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, var(--accent), var(--primary)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .hero-image-container:hover .hero-image {
+    transform: scale(1.05);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent);
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Featured Projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-lg {
+    margin-top: var(--spacing-lg);
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    background-color: var(--background-alt);
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+  
+  .skill-category h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+  }
+  
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .skill-name {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 4px;
+    animation: skillProgress 1.5s ease-out forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  
+  @keyframes skillProgress {
+    to {
+      transform: scaleX(1);
+    }
+  }
+  
+  /* Testimonials */
+  .testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+  
+  .testimonial {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .testimonial-content {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+  }
+  
+  .testimonial-content::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-family: serif;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .author-info h4 {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  
+  .author-info p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.8)), url('/images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cta-content h2 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .cta-content p {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+      font-size: 1.25rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+    
+    .testimonials-slider {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-image-container {
+      width: 180px;
+      height: 180px;
+    }
+  }
+</style>

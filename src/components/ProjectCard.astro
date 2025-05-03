@@ -1,0 +1,109 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  tags?: string[];
+}
+
+const { title, description, image, link, tags = [] } = Astro.props;
+---
+
+<div class="project-card">
+  <div class="project-image">
+    <img src={image} alt={title} />
+    <div class="project-overlay">
+      <a href={link} class="btn-primary">View Project</a>
+    </div>
+  </div>
+  <div class="project-content">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    {tags.length > 0 && (
+      <div class="project-tags">
+        {tags.map(tag => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  .project-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .project-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+  
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+  
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 92, 130, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+  }
+  
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+  
+  .project-content {
+    padding: var(--spacing-md);
+  }
+  
+  .project-content h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+  }
+  
+  .project-content p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+  
+  .tag {
+    background-color: var(--background-alt);
+    color: var(--primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+</style>

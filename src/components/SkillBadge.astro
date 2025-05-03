@@ -1,0 +1,63 @@
+---
+interface Props {
+  name: string;
+  icon?: string;
+  level?: number;
+}
+
+const { name, icon, level = 0 } = Astro.props;
+---
+
+<div class="skill-badge">
+  {icon && <i class={icon}></i>}
+  <span>{name}</span>
+  {level > 0 && (
+    <div class="skill-level">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <div class={`level-dot ${i < level ? 'active' : ''}`}></div>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background-color: var(--background-alt);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .skill-badge i {
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+  
+  .skill-level {
+    display: flex;
+    gap: 3px;
+    margin-left: var(--spacing-sm);
+  }
+  
+  .level-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border);
+  }
+  
+  .level-dot.active {
+    background-color: var(--primary);
+  }
+</style>

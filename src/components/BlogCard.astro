@@ -1,0 +1,106 @@
+---
+interface Props {
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  slug: string;
+}
+
+const { title, excerpt, image, date, slug } = Astro.props;
+---
+
+<div class="blog-card">
+  <div class="blog-image">
+    <img src={image} alt={title} />
+    <div class="blog-date">{date}</div>
+  </div>
+  <div class="blog-content">
+    <h3><a href={`/blog/${slug}`}>{title}</a></h3>
+    <p>{excerpt}</p>
+    <a href={`/blog/${slug}`} class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<style>
+  .blog-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .blog-image {
+    position: relative;
+    height: 200px;
+  }
+  
+  .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .blog-date {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    left: var(--spacing-sm);
+    background-color: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .blog-content {
+    padding: var(--spacing-md);
+  }
+  
+  .blog-content h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+  }
+  
+  .blog-content h3 a {
+    color: var(--text);
+    transition: color var(--transition-fast);
+  }
+  
+  .blog-content h3 a:hover {
+    color: var(--primary);
+  }
+  
+  .blog-content p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+  
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--primary);
+    transition: color var(--transition-fast);
+  }
+  
+  .read-more:hover {
+    color: var(--primary-light);
+  }
+  
+  .read-more i {
+    transition: transform var(--transition-fast);
+  }
+  
+  .read-more:hover i {
+    transform: translateX(4px);
+  }
+</style>

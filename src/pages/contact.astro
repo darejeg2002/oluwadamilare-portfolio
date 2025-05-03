@@ -1,0 +1,868 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | O'Damilare Jegede" description="Get in touch to discuss your eLearning development and instructional design needs.">
+  <section class="contact-hero">
+    <div class="container">
+      <div class="section-title">
+        <h1>Let's Connect</h1>
+        <p>Have a project in mind or want to discuss digital learning solutions? I'd love to hear from you.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>darejeg2002@gmail.com</p>
+            <p>peter.jegede@kiu.ac.ug</p>
+            <p>oluwadamilare.jegede@moniepoint.com</p>
+            <a href="mailto:darejeg2002@gmail.com" class="btn btn-outline">Send Email</a>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>+256 784 704922 (Uganda)</p>
+            <p>+234 803 501 2003 (Nigeria)</p>
+            <a href="tel:+256784704922" class="btn btn-outline">Call Now</a>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Kampala, Uganda</p>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline">View on Map</a>
+          </div>
+          
+          <div class="contact-social">
+            <h3>Connect on Social Media</h3>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/oluwadamilare-jegede-405aaa17" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <div class="form-header">
+            <h2>Send a Message</h2>
+            <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+          </div>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+              <div class="form-indicator"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+              <div class="form-indicator"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+              <div class="form-indicator"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <div class="form-indicator"></div>
+            </div>
+            
+            <div class="form-group">
+              <label class="checkbox-container">
+                <input type="checkbox" name="consent" required>
+                <span class="checkmark"></span>
+                I consent to having my data processed to respond to my inquiry.
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+            </button>
+          </form>
+          
+          <div class="form-success-message" id="formSuccess">
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What services do you offer?</h3>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>I offer a range of digital learning services including eLearning development, instructional design, LMS implementation and administration, curriculum development, and training needs analysis.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How long does a typical eLearning project take?</h3>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>Project timelines vary based on complexity, scope, and content availability. A simple module might take 2-3 weeks, while a comprehensive curriculum could take several months. During our initial consultation, I'll provide a detailed timeline based on your specific needs.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you work with clients internationally?</h3>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! I work with clients globally and have experience collaborating with organizations across Africa, Europe, and North America. All meetings can be conducted virtually, and I'm flexible with scheduling across different time zones.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What information do you need to provide a quote?</h3>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>To provide an accurate quote, I typically need information about your project objectives, target audience, desired outcomes, content availability, timeline, and any specific technical requirements. During our initial consultation, I'll ask targeted questions to understand your needs fully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Form animations and validation
+    const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    
+    // Input animations
+    formInputs.forEach(input => {
+      // Add focus class when input is focused
+      input.addEventListener('focus', () => {
+        input.parentElement.classList.add('focused');
+      });
+      
+      // Remove focus class when input is blurred
+      input.addEventListener('blur', () => {
+        if (input.value.trim() === '') {
+          input.parentElement.classList.remove('focused');
+        }
+        
+        // Validate input
+        validateInput(input);
+      });
+      
+      // Check if input has value on page load
+      if (input.value.trim() !== '') {
+        input.parentElement.classList.add('focused');
+      }
+    });
+    
+    // Validate input function
+    function validateInput(input) {
+      const parent = input.parentElement;
+      
+      if (input.required && input.value.trim() === '') {
+        parent.classList.add('error');
+        parent.classList.remove('valid');
+      } else if (input.type === 'email' && input.value.trim() !== '') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(input.value)) {
+          parent.classList.add('error');
+          parent.classList.remove('valid');
+        } else {
+          parent.classList.remove('error');
+          parent.classList.add('valid');
+        }
+      } else if (input.value.trim() !== '') {
+        parent.classList.remove('error');
+        parent.classList.add('valid');
+      }
+    }
+    
+    // Form submission
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Validate all inputs
+      let isValid = true;
+      formInputs.forEach(input => {
+        validateInput(input);
+        if (input.parentElement.classList.contains('error')) {
+          isValid = false;
+        }
+      });
+      
+      if (isValid) {
+        // Simulate form submission
+        const submitBtn = document.querySelector('.submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('loading');
+        
+        // Simulate API call
+        setTimeout(() => {
+          submitBtn.classList.remove('loading');
+          contactForm.classList.add('hidden');
+          formSuccess.classList.add('visible');
+          
+          // Add confetti animation
+          createConfetti();
+        }, 1500);
+      }
+    });
+    
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        
+        // Close all FAQ items
+        faqItems.forEach(faq => {
+          faq.classList.remove('active');
+          const icon = faq.querySelector('.faq-icon i');
+          icon.className = 'fas fa-plus';
+        });
+        
+        // Open clicked item if it wasn't already open
+        if (!isOpen) {
+          item.classList.add('active');
+          const icon = item.querySelector('.faq-icon i');
+          icon.className = 'fas fa-minus';
+        }
+      });
+    });
+    
+    // Confetti animation
+    function createConfetti() {
+      const confettiContainer = document.createElement('div');
+      confettiContainer.className = 'confetti-container';
+      document.body.appendChild(confettiContainer);
+      const colors = ['#2A5C82', '#FFD700', '#3a6d93', '#ffe033', '#1a4c72'];
+      
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        confetti.style.animationDelay = Math.random() * 5 + 's';
+        confettiContainer.appendChild(confetti);
+      }
+      
+      // Remove confetti after animation
+      setTimeout(() => {
+        confettiContainer.remove();
+      }, 8000);
+    }
+    
+    // Contact cards hover animation
+    const contactCards = document.querySelectorAll('.contact-card');
+    
+    contactCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.classList.add('hover');
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('hover');
+      });
+    });
+    
+    // Social icons hover animation
+    const socialIcons = document.querySelectorAll('.social-icon');
+    
+    socialIcons.forEach(icon => {
+      icon.addEventListener('mouseenter', () => {
+        icon.classList.add('bounce');
+      });
+      
+      icon.addEventListener('animationend', () => {
+        icon.classList.remove('bounce');
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Contact Hero */
+  .contact-hero {
+    background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.8)), url('/images/contact-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+  
+  .contact-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .contact-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Contact Container */
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .contact-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--primary-light);
+    opacity: 0.1;
+    transition: height var(--transition-normal);
+    z-index: 0;
+  }
+  
+  .contact-card.hover::before {
+    height: 100%;
+  }
+  
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto var(--spacing-md);
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-normal), background-color var(--transition-normal);
+  }
+  
+  .contact-card.hover .contact-icon {
+    transform: scale(1.1);
+    background-color: var(--primary-dark);
+  }
+  
+  .contact-card h3 {
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contact-card p {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contact-card .btn {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contact-social {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+  }
+  
+  .contact-social h3 {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+  
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--background-alt);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  }
+  
+  .social-icon:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .social-icon.bounce {
+    animation: bounce 0.5s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Contact Form */
+  .contact-form-container {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .form-header h2 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary);
+  }
+  
+  .form-header p {
+    color: var(--text-light);
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+  }
+  
+  .contact-form.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    position: absolute;
+    width: 100%;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    transition: all var(--transition-fast);
+    pointer-events: none;
+    color: var(--text-light);
+  }
+  
+  .form-group textarea + label {
+    top: 1rem;
+    transform: none;
+  }
+  
+  .form-group.focused label {
+    top: 0;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    background-color: var(--background);
+    padding: 0 0.5rem;
+    color: var(--primary);
+  }
+  
+  .form-group textarea + label.focused {
+    top: -0.5rem;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-md);
+    font-family: var(--body-font);
+    background-color: transparent;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .form-group input:focus, 
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(42, 92, 130, 0.2);
+  }
+  
+  .form-group.error input, 
+  .form-group.error textarea {
+    border-color: var(--error);
+  }
+  
+  .form-group.valid input, 
+  .form-group.valid textarea {
+    border-color: var(--success);
+  }
+  
+  .form-indicator {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+  
+  .form-group.error .form-indicator::before {
+    content: '!';
+    color: var(--error);
+    font-weight: bold;
+    opacity: 1;
+  }
+  
+  .form-group.valid .form-indicator::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: bold;
+    opacity: 1;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    border-color: var(--primary);
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+  }
+  
+  .submit-btn .btn-icon {
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all var(--transition-normal);
+  }
+  
+  .submit-btn:hover .btn-icon {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .submit-btn:hover .btn-text {
+    transform: translateX(-5px);
+  }
+  
+  .submit-btn.loading {
+    background-color: var(--primary-light);
+  }
+  
+  .submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .submit-btn.loading .btn-text,
+  .submit-btn.loading .btn-icon {
+    opacity: 0;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Form Success Message */
+  .form-success-message {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    pointer-events: none;
+  }
+  
+  .form-success-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  
+  .success-icon {
+    font-size: 4rem;
+    color: var(--success);
+    margin-bottom: var(--spacing-md);
+    animation: scale-in 0.5s ease-out;
+  }
+  
+  @keyframes scale-in {
+    0% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    background-color: var(--background-alt);
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .faq-item {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  
+  .faq-question:hover {
+    background-color: rgba(42, 92, 130, 0.05);
+  }
+  
+  .faq-question h3 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+  
+  .faq-icon {
+    color: var(--primary);
+    transition: transform var(--transition-fast);
+  }
+  
+  .faq-answer {
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal), padding var(--transition-normal);
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    max-height: 500px;
+  }
+  
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+  
+  /* Confetti Animation */
+  .confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .confetti {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    opacity: 0.8;
+    animation: fall linear forwards;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+      order: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form-container {
+      padding: var(--spacing-lg);
+    }
+    
+    .contact-info {
+      gap: var(--spacing-md);
+    }
+  }
+</style>

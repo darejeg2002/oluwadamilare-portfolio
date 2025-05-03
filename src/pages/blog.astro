@@ -1,0 +1,324 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import BlogCard from '../components/BlogCard.astro';
+---
+
+<Layout title="Blog | Digital Learning Specialist" description="Insights and articles on eLearning development, instructional design, and digital learning best practices.">
+  <section class="blog-hero">
+    <div class="container">
+      <div class="section-title">
+        <h1>Blog & Insights</h1>
+        <p>Thoughts, tips, and best practices on digital learning and instructional design</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section blog-content">
+    <div class="container">
+      <div class="blog-layout">
+        <div class="blog-main">
+          <div class="blog-grid">
+            <BlogCard 
+              title="How to Transition from Teaching to eLearning Development" 
+              excerpt="Leverage your teaching experience to build a successful career in eLearning development with these practical steps and insights."
+              image="/images/blog-transition.jpg"
+              date="June 15, 2023"
+              slug="teaching-to-elearning"
+            />
+            
+            <BlogCard 
+              title="Comparing TalentLMS vs. Moodle: A Developer's Perspective" 
+              excerpt="An in-depth comparison of two popular learning management systems, with insights on which platform might be right for your organization."
+              image="/images/blog-lms-comparison.jpg"
+              date="May 22, 2023"
+              slug="talentlms-vs-moodle"
+            />
+            
+            <BlogCard 
+              title="5 Microlearning Strategies That Actually Work" 
+              excerpt="Discover effective microlearning approaches that improve knowledge retention and learner engagement in corporate training environments."
+              image="/images/blog-microlearning.jpg"
+              date="April 10, 2023"
+              slug="microlearning-strategies"
+            />
+            
+            <BlogCard 
+              title="The Future of eLearning: AI and Adaptive Learning Paths" 
+              excerpt="Explore how artificial intelligence is transforming digital learning through personalized, adaptive learning experiences."
+              image="/images/blog-ai-learning.jpg"
+              date="March 5, 2023"
+              slug="ai-adaptive-learning"
+            />
+            
+            <BlogCard 
+              title="Creating Accessible eLearning: A Comprehensive Guide" 
+              excerpt="Learn how to design digital learning experiences that are accessible to all learners, including those with disabilities."
+              image="/images/blog-accessibility.jpg"
+              date="February 18, 2023"
+              slug="accessible-elearning"
+            />
+            
+            <BlogCard 
+              title="From Boring to Engaging: Transforming Compliance Training" 
+              excerpt="Practical strategies to make mandatory compliance training more engaging and effective for your organization."
+              image="/images/blog-compliance.jpg"
+              date="January 25, 2023"
+              slug="engaging-compliance-training"
+            />
+          </div>
+          
+          <div class="pagination">
+            <span class="page-number active">1</span>
+            <a href="#" class="page-number">2</a>
+            <a href="#" class="page-number">3</a>
+            <a href="#" class="page-nav">Next <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="blog-sidebar">
+          <div class="sidebar-widget search-widget">
+            <h3>Search</h3>
+            <form class="search-form">
+              <input type="text" placeholder="Search articles...">
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          
+          <div class="sidebar-widget categories-widget">
+            <h3>Categories</h3>
+            <ul class="category-list">
+              <li><a href="#">eLearning Development <span>(8)</span></a></li>
+              <li><a href="#">Instructional Design <span>(6)</span></a></li>
+              <li><a href="#">LMS Administration <span>(4)</span></a></li>
+              <li><a href="#">Educational Technology <span>(5)</span></a></li>
+              <li><a href="#">Career Development <span>(3)</span></a></li>
+            </ul>
+          </div>
+          
+          <div class="sidebar-widget popular-widget">
+            <h3>Popular Posts</h3>
+            <ul class="popular-posts">
+              <li>
+                <a href="/blog/microlearning-strategies">
+                  <div class="post-image">
+                    <img src="/images/blog-microlearning-thumb.jpg" alt="Microlearning Strategies">
+                  </div>
+                  <div class="post-info">
+                    <h4>5 Microlearning Strategies That Actually Work</h4>
+                    <span>April 10, 2023</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/blog/teaching-to-elearning">
+                  <div class="post-image">
+                    <img src="/images/blog-transition-thumb.jpg" alt="Teaching to eLearning">
+                  </div>
+                  <div class="post-info">
+                    <h4>How to Transition from Teaching to eLearning Development</h4>
+                    <span>June 15, 2023</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/blog/accessible-elearning">
+                  <div class="post-image">
+                    <img src="/images/blog-accessibility-thumb.jpg" alt="Accessible eLearning">
+                  </div>
+                  <div class="post-info">
+                    <h4>Creating Accessible eLearning: A Comprehensive Guide</h4>
+                    <span>February 18, 2023</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="sidebar-widget subscribe-widget">
+            <h3>Subscribe</h3>
+            <p>Get the latest articles and insights delivered to your inbox.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Blog Hero */
+  .blog-hero {
+    background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.8)), url('/images/blog-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+  
+  .blog-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .blog-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Blog Layout */
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  /* Blog Main */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .page-number, .page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+  }
+  
+  .page-number {
+    color: var(--text);
+    background-color: var(--background);
+  }
+  
+  .page-number.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .page-number:hover:not(.active) {
+    background-color: var(--background-alt);
+  }
+  
+  .page-nav {
+    width: auto;
+    padding: 0 var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    background-color: var(--background);
+  }
+  
+  .page-nav:hover {
+    background-color: var(--background-alt);
+  }
+  
+  .page-nav i {
+    margin-left: var(--spacing-xs);
+  }
+  
+  /* Blog Sidebar */
+  .sidebar-widget {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .sidebar-widget h3 {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-xs);
+    font-size: 1.25rem;
+  }
+  
+  .sidebar-widget h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+  }
+  
+  /* Search Widget */
+  .search-form {
+    display: flex;
+    gap: var(--spacing-xs);
+  }
+  
+  .search-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-md);
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+  }
+  
+  .search-form button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  
+  .search-form button:hover {
+    background-color: var(--primary-light);
+  }
+  
+  /* Categories Widget */
+  .category-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .category-list li a {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--border);
+    transition: color var(--transition-fast);
+  }
+  
+  .category-list li:last-child a {
+    border-bottom: none;
+  }
+  
+  .category-list li a:hover {
+    color: var(--primary);
+  }
+  
+  .category-list span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  /* Popular Posts Widget */
+  .popular-posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m
